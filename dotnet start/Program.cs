@@ -22,8 +22,23 @@ app.MapGet("/user/{code}", ([FromRoute] string code) => {
 
 app.Run();
 
+public static class ProductRepository {
+    public static List<Produt> Products { get;set; }  
+
+    public static void Add(Produt product) {
+        if(Products == null) 
+            Products = new List<Produt>();
+        
+        Products.Add(product);
+    }
+
+    public static Produt GetBy(string code) {
+       return Products.First(p => p.Code == code);
+    }
+}
+
 public class Produt {
-    public int Code { get; set; }
+    public string Code { get; set; }
     public string Name { get; set; }
 }
 
