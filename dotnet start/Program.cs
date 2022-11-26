@@ -9,7 +9,7 @@ app.MapPost("/", () => new {Name = "Leonardo", Age = 24});
 app.MapGet("/AddName", (HttpResponse response) => response.Headers.Add("Teste","Leonardo"));
 
 app.MapPost("/saveProdut", (Produt produt) => {
-    return produt.Code + " - " + produt.Name;
+    ProductRepository.Add(produt);
 } );
 
 app.MapGet("/user", ([FromQuery]string dataStart, [FromQuery]string dateEnd) => {
@@ -17,8 +17,14 @@ app.MapGet("/user", ([FromQuery]string dataStart, [FromQuery]string dateEnd) => 
 });
 
 app.MapGet("/user/{code}", ([FromRoute] string code) => {
-    return code;
+    var product = ProductRepository.GetBy(code);
+    return product;
 });
+
+app.MapPut("/editProduct", (Produt product) => {
+    var productSave = ProductRepository.GetBy(product.Code);
+    productSave.Name = product.Name;
+    });
 
 app.Run();
 
@@ -33,7 +39,7 @@ public static class ProductRepository {
     }
 
     public static Produt GetBy(string code) {
-       return Products.First(p => p.Code == code);
+       return Products.FirstOrDefault(p => p.Code == code);
     }
 }
 

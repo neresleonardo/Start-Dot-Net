@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "S:\\Users\\Leo\\Desktop\\dotnet\\dotnet.csproj": {}
+    "S:\\Users\\Leo\\Desktop\\Dash git\\Start-Dot-Net\\dotnet start\\dotnet.csproj": {}
   },
   "projects": {
-    "S:\\Users\\Leo\\Desktop\\dotnet\\dotnet.csproj": {
+    "S:\\Users\\Leo\\Desktop\\Dash git\\Start-Dot-Net\\dotnet start\\dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\Users\\Leo\\Desktop\\dotnet\\dotnet.csproj",
+        "projectUniqueName": "S:\\Users\\Leo\\Desktop\\Dash git\\Start-Dot-Net\\dotnet start\\dotnet.csproj",
         "projectName": "dotnet",
-        "projectPath": "S:\\Users\\Leo\\Desktop\\dotnet\\dotnet.csproj",
+        "projectPath": "S:\\Users\\Leo\\Desktop\\Dash git\\Start-Dot-Net\\dotnet start\\dotnet.csproj",
         "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-        "outputPath": "S:\\Users\\Leo\\Desktop\\dotnet\\obj\\",
+        "outputPath": "S:\\Users\\Leo\\Desktop\\Dash git\\Start-Dot-Net\\dotnet start\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
